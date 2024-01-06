@@ -89,14 +89,23 @@
     border: none;
 }
 
-.flex-img {
-    width: 400px;
+.flex-img img {
+    width: 100%;
     min-width: 200px;
+    max-width: 400px;
     border-radius: 0 25px 25px;
-
+    display: block;
 }
 
 .made_with {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 740px) {
+    .flex-img img {
+        width: 100%;
+        max-width: none;
+        border-radius: 0 0 25px 25px; /* Eliminar el redondeo de bordes si lo deseas */
+    }
 }
